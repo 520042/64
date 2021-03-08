@@ -389,7 +389,7 @@ var start = async (params) => {
     ...taskOption,
     startTime: 0,
     startHours: 0,
-    ignoreRelay: true
+    ignoreRelay: false
   })
 
   // 定时检测流量兑换
@@ -407,7 +407,7 @@ var start = async (params) => {
     isCircle: true,
     intervalTime: intervalTime,
     startTime: 5 * 60,
-    ignoreRelay: true
+    ignoreRelay: false
   })
 
   // 每日奖励信息结果推送
