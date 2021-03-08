@@ -383,7 +383,7 @@ var start = async (params) => {
   })
 
   // 每日0点自动兑换流量
-  await scheduler.regTask('exchangeDFlow', async (request) => {
+  /*await scheduler.regTask('exchangeDFlow', async (request) => {
     await require('./exchangeDFlow').doTask(request, options)
   }, {
     ...taskOption,
@@ -409,7 +409,7 @@ var start = async (params) => {
     startTime: 5 * 60,
     ignoreRelay: false
   })
-
+*/
   // 每日奖励信息结果推送
   if (!('asm_func' in process.env) || process.env.asm_func === 'false') {
     await scheduler.regTask('dailyNotifyReward', async (request) => {
